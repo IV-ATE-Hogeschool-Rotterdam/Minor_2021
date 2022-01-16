@@ -1,7 +1,7 @@
 # Minor_2021
 This repository 
 
-Applied Engineering and Sciences
-Automotive
+Automotive Technology and Engineering (ATE)
+School of Engineering and Applied Sciences (AES)
 Hogeschool Rotterdam
 January 2022
