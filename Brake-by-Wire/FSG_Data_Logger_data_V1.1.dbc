@@ -1,0 +1,194 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Car RES Datalogger Remsysteem Stuursysteem CentraleRegeleenheid Powertrain BMS AutonoomRegelsysteem
+
+
+VAL_TABLE_ DL_Status 8 "Error" 7 "Logging EM & FSD data" 5 "Logging FSD data" 3 "Logging EM data" 1 "DL idle, ready to log" ;
+
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ FMEA_Template_05 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ FMEA_Template_04 : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ FMEA_Template_03 : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ FMEA_Template_02 : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ FMEA_Template_01 : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RES_Template_03 : 0|64@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RES_Template_02 : 0|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ RES_Template_01 : 0|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0007 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0008 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Cones_count_actual : 15|8@1+ (1,0) [0|255] ""  AutonoomRegelsysteem,Datalogger,BMS
+ SG_ Cones_count_all : 23|16@1+ (1,0) [0|65535] ""  BMS,AutonoomRegelsysteem,Datalogger
+ SG_ Lap_counter : 11|4@1+ (1,0) [0|255] ""  BMS,AutonoomRegelsysteem,Datalogger
+ SG_ AS_state_emergency_brake m4 : 0|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AS_state_ready m2 : 0|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AS_state_off m1 : 0|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AS_state_finish m5 : 0|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AS_state_driving m3 : 0|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ EBS_state_activated m3 : 3|2@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ EBS_state_unavailable m1 : 3|2@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ EBS_state_armed m2 : 3|2@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AMI_state_trackdrive m3 : 5|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AMI_state_skidpad m2 : 5|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AMI_state_braketest m4 : 5|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AMI_state_acceleration m1 : 5|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AMI_state_inspection m5 : 5|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ AMI_state_autocross m6 : 5|3@1+ (1,0) [0|1] ""  Powertrain,BMS,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ Steering_state : 8|1@1+ (1,0) [0|1] ""  Powertrain,AutonoomRegelsysteem,Stuursysteem,Remsysteem,Datalogger,RES
+ SG_ Service_brake_state_disengaged m1 : 9|2@1+ (1,0) [0|1] ""  Remsysteem,Datalogger,RES
+ SG_ Service_brake_state_engaged m2 : 9|2@1+ (1,0) [0|1] ""  Remsysteem,Datalogger,RES
+ SG_ Service_brake_state_available m3 : 9|2@1+ (1,0) [0|1] ""  Remsysteem,Datalogger,RES
+ SG_ NewSignal_0004 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0005 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Pot1 : 0|8@1+ (1,0) [0|255] "Volt" Vector__XXX
+ SG_ Pot2 : 8|8@1+ (1,0) [0|255] "Volt" Vector__XXX
+ SG_ Stuurhoek : 24|8@1+ (0.5,0) [-128|127] "°" Vector__XXX
+ SG_ Current_Stuurhoek : 8|8@1- (0.5,0) [-128|127] "°" Vector__XXX
+ SG_ Actuator_Pos_Actual : 0|9@1+ (1,0) [0|360] "Degree"  CentraleRegeleenheid,RES
+ SG_ Actuator_Pos_Target : 9|9@1+ (1,0) [0|360] "Degree"  CentraleRegeleenheid,RES
+ SG_ Brake_Fluid_Pressure_Front : 18|4@1+ (1,0) [0|15] "bar"  CentraleRegeleenheid,RES
+ SG_ Brake_Balance : 22|8@1+ (1,0) [0|100] "%"  CentraleRegeleenheid,RES
+ SG_ Brakesystem_status : 30|3@1+ (1,0) [0|4] ""  CentraleRegeleenheid,RES
+ SG_ Overtravel_Switch_Activation : 33|1@1+ (1,0) [0|1] ""  CentraleRegeleenheid,RES
+
+BO_ 1072 FSE_EnergyMeter_Data: 8 Datalogger
+ SG_ Current : 48|16@1- (0.05,0) [-1638.4|1638.35] "A"  Datalogger
+ SG_ Voltage : 32|16@1- (0.04,0) [-1310.72|1310.68] "V"  Datalogger
+ SG_ Power : 16|16@1- (3,0) [-98304|98301] "W"  Datalogger
+ SG_ Status : 8|8@1+ (1,0) [0|255] ""  Datalogger
+ SG_ MsgCntr : 0|8@1+ (1,0) [0|255] ""  Datalogger
+
+BO_ 500 DriverlessDrivingDynamics1: 8 CentraleRegeleenheid
+ SG_ Speed_actual : 0|8@1+ (1,0) [0|255] "kph"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,BMS,AutonoomRegelsysteem
+ SG_ Speed_target : 8|8@1+ (1,0) [0|255] "kph"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,BMS,AutonoomRegelsysteem
+ SG_ Brake_actual : 32|8@1+ (1,0) [0|100] "%"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,AutonoomRegelsysteem
+ SG_ Brake_target : 40|8@1+ (1,0) [0|100] "%"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,AutonoomRegelsysteem
+ SG_ Motor_moment_actual : 48|8@1- (1,0) [0|100] "%"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,AutonoomRegelsysteem
+ SG_ Motor_moment_target : 56|8@1- (1,0) [0|100] "%"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,AutonoomRegelsysteem
+
+BO_ 501 DriverlessDrivingDynamics2: 6 CentraleRegeleenheid
+ SG_ Acceleration_longitudinal : 0|16@1- (0.001953125,0) [0|0] "m/s^2"  RES,Datalogger,Powertrain,AutonoomRegelsysteem
+ SG_ Acceleration_lateral : 16|16@1- (0.00195312,0) [0|0] "m/s^2"  RES,Datalogger,Powertrain,AutonoomRegelsysteem
+ SG_ Yaw_Rate : 32|16@1- (0.00078125,0) [0|0] "*/s"  RES,Datalogger,Powertrain,AutonoomRegelsysteem
+
+BO_ 513 Stuur_systeem: 2 Stuursysteem
+ SG_ Steering_angle_actual : 0|8@1- (0.5,0) [-128|127] "°"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,AutonoomRegelsysteem
+ SG_ Steering_angle_target : 8|8@1- (0.5,0) [-128|127] "°"  RES,Datalogger,Remsysteem,Stuursysteem,Powertrain,AutonoomRegelsysteem
+
+BO_ 512 Aansturing_Remsysteem: 2 CentraleRegeleenheid
+ SG_ Target_Rempedaal : 0|8@1+ (0.392156863,0) [0|100] "%" Vector__XXX
+ SG_ Systeem_Mode : 8|4@1+ (1,0) [0|5] "" Vector__XXX
+ SG_ Service_Mode : 12|4@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 514 Verzending_Remsysteem: 2 Remsysteem
+ SG_ Current_Rempedaal : 0|8@1+ (0.392156863,0) [0|100] "%" Vector__XXX
+ SG_ Overtravel_switch : 8|1@1+ (1,0) [0|1] "BOOLEAN
+" Vector__XXX
+
+
+
+CM_ BU_ RES "Remote Emergency System
+";
+CM_ BU_ Remsysteem "De Node van het Drive - By - Wire Remsysteem
+";
+CM_ BU_ Stuursysteem "De Node van het stuursysteem
+";
+CM_ BU_ CentraleRegeleenheid "De Centrale regeleenheid
+";
+CM_ BU_ Powertrain "De regeleenheid van het Powertrain regelsysteem
+";
+CM_ BU_ BMS "De regeleenheid van het Batterij Management Systeem
+";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 Cones_count_actual "Holds the number of all cones that are currently detected";
+CM_ SG_ 3221225472 Cones_count_all "Holds the number of all cones ever detected in this dynamic discipline";
+CM_ SG_ 3221225472 Steering_state "BOOL
+";
+CM_ SG_ 3221225472 Actuator_Pos_Actual "Het aantal verdraaide graden van de actuator vanaf de nul-positie
+";
+CM_ SG_ 3221225472 Actuator_Pos_Target "De gewenste positie van de actuator
+";
+CM_ SG_ 3221225472 Brake_Fluid_Pressure_Front "De vloeistofdruk in het voorste remsysteem
+";
+CM_ SG_ 3221225472 Brake_Balance "Het remverschil tussen de voorste en achterste as
+";
+CM_ SG_ 3221225472 Brakesystem_status "Status van het remsysteem (ON/OFF/ERROR/SERVICE)";
+CM_ SG_ 3221225472 Overtravel_Switch_Activation "Status van de Overtravel Switch (ON/OFF)";
+CM_ BO_ 512 "Berichten vanuit de centrale regeleenheid voor het remsysteem
+";
+CM_ SG_ 514 Overtravel_switch "";
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 1215752192;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 50000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "NmBaseAddress" HEX 1024 1087;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "GenMsgSendType" BO_ 1072 0;
+BA_ "GenMsgCycleTime" BO_ 1072 20;
+BA_ "GenMsgSendType" BO_ 512 0;
+BA_ "GenMsgCycleTime" BO_ 512 100;
+BA_ "NmStationAddress" BU_ Datalogger 0;
+VAL_ 1072 Status 8 "Error" 7 "Logging EM & FSD data" 5 "Logging FSD data" 3 "Logging EM data" 1 "DL idle, ready to log" ;
+
