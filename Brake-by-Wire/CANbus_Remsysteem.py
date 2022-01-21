@@ -3,7 +3,7 @@ import cantools                                      # Importeert can library   
 from can.message import Message                      # Importeert can library       (CAN)
 
 import Functies_Remsysteem                           # Importeert de overige functies voor het remsysteem script
-import ADC_Remsysteem                                # Importeert de functies voor de ADC 
+#import ADC_Remsysteem                                # Importeert de functies voor de ADC 
 import Motor_Controller_Remsysteem                   # Importeert de motor_ Controller Module
 
 Over_Travel_switch = Functies_Remsysteem.Over_travel_switch()

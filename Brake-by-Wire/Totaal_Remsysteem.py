@@ -18,12 +18,16 @@ PID = Motor_Controller_Remsysteem.PIDC(1,0,0,-100,100)
 Motor = Motor_Controller_Remsysteem.DOGA(12,26,500) # 33, 18 voor BOARD layout
 Current_Rempositie = Motor_Controller_Remsysteem.Huidige_Hoek()
 
+#Data_Remdruksensoren = Functies_Remsysteem.Remdruksensoren_data()
+Meting_Remdruksensoren = Functies_Remsysteem.Remdruksensor()
+
 while True:
-        
 #     if eigen_keyboard.Toggle_k() :                            # wordt zal de code in deze klasse geactiveerd worden (en zal de motor in/uitgeschakeld worden) 
 #         eigen_keyboard.motor_uit(pulseio.PWMOut(32))   # Als Display True is opend deze loop
 #     else:                                                     # Als Display False is opend deze loop
 #         eigen_keyboard.motor_aan(pulseio.PWMOut(32))
+
+    Meting_Remdruksensoren.Meting()
 
     CAN_bus.Verzenden(Current_Rempositie)                                   # De Remdruksensoren data wordt uitgezonden   
     Ontvangen_data = CAN_bus.Ontvangen(Ontvangen_data)                                   # Data vanuit de CAN bus wordt ontvangen

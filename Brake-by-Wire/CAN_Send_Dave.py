@@ -19,8 +19,8 @@ while True:
     
     # Aansturing Remsysteem bericht
     
-    Target_Rempedaal = 50              # Gewenste voertuigsnelheid in km/h
-    Systeem_Mode = 4                   # Systeem modus van het autonome systeem 0 = off, 1 = ready, 2 = driving, 3 = emergency brake, 4 = finish
+    Target_Rempedaal = 100              # Gewenste voertuigsnelheid in km/h
+    Systeem_Mode = 2                   # Systeem modus van het autonome systeem 0 = off, 1 = ready, 2 = driving, 3 = emergency brake, 4 = finish
     Service_Mode = 1                   # Service modus van het remsysteem 1 = disengaged, 2 = engaged, 3 = available
     
     # Zelfde proces als Test_berichten (er wordt een bericht aangemaakt en verzonden)
@@ -32,7 +32,7 @@ while True:
     
     message = bus.recv()                                             # Berichten van de bus worden verbonden aan parameter 'message'
     message=db.decode_message(message.arbitration_id, message.data)  # De berichten worden gedecodeerd aan de hand van de dbc file
-    Verzending_Remsysteem_CR =message.get('Current_Rempedaal')       # Met behulp van het dbc file worden specifieke waardes uit de data gehaald
+    Verzending_Remsysteem_CR =round(message.get('Current_Rempedaal'))      # Met behulp van het dbc file worden specifieke waardes uit de data gehaald
     Verzending_Remsysteem_OVS=message.get('Overtravel_switch')       # Idem
     
     print(Verzending_Remsysteem_CR, Verzending_Remsysteem_OVS)       # Ontvangen data wordt geprint

@@ -3,6 +3,10 @@ import keyboard                                      # Importeert keyboard libra
 import digitalio                                     # Importeert digitalio library (adafruit)
 from gpiozero import InputDevice
 
+import busio                                         # Importeert busio library     (adafruit)
+import adafruit_ads1x15.ads1015 as ADS               # Importeert ADS library       (adafruit)
+from adafruit_ads1x15.analog_in import AnalogIn      # Importeer AnalogIn library   (adafruit)
+
 # Arduino Map Functie
 
 def arduino_map(x, in_min, in_max, out_min, out_max):#Maakt de Arduino map() functie na voor het verwerken van analoge signalen                          
@@ -13,6 +17,19 @@ def arduino_map(x, in_min, in_max, out_min, out_max):#Maakt de Arduino map() fun
 Pin1 = InputDevice(16)
 Pin2 = InputDevice(20)
 Schakelaarstand = 0
+
+class Remdruksensor:
+    def __init__(self):
+        self.i2c = busio.I2C(3,2)
+        self.ads = ADS.ADS1015(self.i2c)
+        self.chan1 = AnalogIn(self.ads,ADS.P0)
+        self.chan2 = AnalogIn(self.ads,ADS.P1)
+    
+    def Meting(self):
+        self.Remdruk_Voor = (self.chan1.voltage)
+        self.Remdruk_Achter = (self.chan2.voltage)     
+        print(round(self.Remdruk_Voor,2),round(self.Remdruk_Achter,2))
+        return self.Remdruk_Voor, self.Remdruk_Achter
 
 class Over_travel_switch:
     def __init__(self):
